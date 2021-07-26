@@ -1,7 +1,8 @@
-import React from "react";
-import Main from "./Components/Main";
+import React from 'react';
+import Main from './Components/Main';
 import Header from './Components/Header';
-import Footer from "./Components/Footer";
+import Footer from './Components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
   render() {
