@@ -1,21 +1,22 @@
 import React from "react";
 
+import data from "./assets/data.json";
+
 import HornedBeasts from "./HornedBeasts";
 class Main extends React.Component {
   render() {
+    console.log(data);
     return (
       <main>
-        <HornedBeasts
-          title="Markhor"
-          description="Markhor grow to more than five feet long."
-          img="https://modernfarmer.com/wp-content/uploads/2014/08/saiga.jpg"
-        />
-
-        <HornedBeasts
-          title="Saiga"
-          description=" the saiga is a truly absurd-looking and delightful antelope."
-          img="https://modernfarmer.com/wp-content/uploads/2014/08/nubianibex.jpg"
-        />
+        {data.map((element) => {
+          return (
+            <HornedBeasts
+              title={element.title}
+              description={element.description}
+              image_url={element.image_url}
+            />
+          );
+        })}
       </main>
     );
   }

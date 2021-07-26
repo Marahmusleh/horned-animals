@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 class Header extends React.Component {
   render() {
-    return <h1>Horned Animals</h1>;
+    return <h1>Horned Animals </h1>;
   }
 }
 
