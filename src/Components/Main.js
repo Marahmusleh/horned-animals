@@ -4,6 +4,8 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import FloatingLabel from "react-bootstrap/FloatingLabel";
+
 
 class Main extends React.Component {
   constructor(props) {
@@ -35,17 +37,22 @@ class Main extends React.Component {
     return (
       <div>
         <Container className='p-3'>
-          <Form.Control
-            as='select'
-            defaultValue='all'
-            onChange={(e) => this.handleChange(e)}
+          <FloatingLabel
+            controlId='floatingSelect'
+            label='Select the Number of Horns'
           >
-            <option value='all'> All</option>
-            <option value='1'> One</option>
-            <option value='2'> Two</option>
-            <option value='3'> Three</option>
-            <option value='100'> One Hunderd</option>
-          </Form.Control>
+            <Form.Control
+              as='select'
+              defaultValue='all'
+              onChange={(e) => this.handleChange(e)}
+            >
+              <option value='all'> All</option>
+              <option value='1'> One</option>
+              <option value='2'> Two</option>
+              <option value='3'> Three</option>
+              <option value='100'> One Hunderd</option>
+            </Form.Control>
+          </FloatingLabel>
         </Container>
 
         <Container>
